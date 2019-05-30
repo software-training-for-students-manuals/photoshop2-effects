@@ -1,0 +1,885 @@
+<!DOCTYPE html/>
+<html><!-- 
+
+WELCOME USER! You've reached the source code for a manual created by STS. If you plan on updating or editing this manual, then you're in the right place!
+
+Before editing this manual, please read through the manual editing guide. It is important that we adhere to the conventions set in the guide in order to maintain quality and consistency across all manuals.
+
+A few things to note:
+
+* In order to have a working preview with accurate CSS and functional JavaScript, you will need a copy of the /master-files folder in the same parent directory as the folder with your manual editing files in it, e.g. if you have a folder on your desktop "STS Manuals", and you're editing the Excel 1 manual in the "excel1" folder and the Photoshop 1 folder in the "photoshop1" folder, you will need to have the "master-files" folder in "STS Manuals" as well, since the manual files link to the CSS/Javascript using relative links. Your folder will look like this: 
+
+├STS Manuals 
+├╴╴excel1
+├╴╴╴╴╴images
+├╴╴╴╴╴class_files
+├╴╴master-files
+├╴╴photoshop1
+├╴╴╴╴╴images
+├╴╴╴╴╴class_files
+
+
+* Manuals should be arranged into Topics, which are enclosed in the <section class="topic"> tag, and followed immediately by an <h1> tag with the topic name in it, e.g.
+
+<section class="topic">
+<h1>Topic name</h1>
+<p>Neat and helpful information goes here</p>
+</section>
+
+The <section class="topic"> and following <h1> element are how the manual's JavaScript automagically builds the Topics outline and creates the links, so if they are not there, the manual will be without a table of contents and its friends will probably make fun of it (which is decidedly not cool).
+
+* Unless you are changing the contents of the <title></title> tag, you should not have to touch the <head> portion of this document (unless instructed to do so). This tag connects the HTML to the CSS and JavaScript that keep the manual functioning. Look for the comment tag that says "MAIN CONTENT", and you may edit there.
+
+
+Good luck, and have fun!
+
+-->
+    <head>
+
+        <!-- Manual title -->
+        <title>Photoshop 2: Effects</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Software manual provided by Software Training for Students at the University of Wisconsin.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' id='uwmadison-fonts-css'  href='https://brand.wisc.edu/content/themes/uw-theme/dist/fonts/uw160/fonts.css?ver=1.1.1' type='text/css' media='all' />
+        <link rel="stylesheet" type="text/css" href="../master-files/css/stylesheet.css">
+        <script src="../master-files/highlight.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="../master-files/smooth-scroll.js"></script>
+        <script src="../master-files/primary-functions.js"></script>
+        <script src="../master-files/ga.js"></script>       
+
+    </head>
+
+    <body>
+        <!-- begin front page -->
+
+        <div class="manual-front-page">
+            <div id="coverpage-title">
+                <h1>Photoshop 2</h1>
+                <h2>Special Effects</h2>
+            </div>
+            <div id="about-page"></div>
+            <div id="outline"></div>
+        </div>
+        <!-- BEGIN MAIN CONTENT -->
+
+        <section class="topic">
+
+            <h1>Introduction</h1>
+            <p>Adobe Photoshop, a part of the Adobe Creative suite, is a powerful image editing and manipulation program. Used worldwide by professional photographers and designers, Photoshop is considered industry standard.</p>
+            <p>This class assumes you have completed our Photoshop 1 class, or have similar experience. We will assume you are familiar with Photoshop's interface, and have a basic understanding of its features. If you need to, you may always refer back to the Photoshop 1 manual for more information.</p>
+
+            <h2>About this Class</h2>
+            <p>In this class, our topic is <em>filters and effects</em>. We will be sampling a variety of creative tools and concepts in Photoshop, then will leave you to your own imagination to decide how to use them. These tools and features will act as a stepping stone towards creating the graphic or image you have imagined. We will spend time on the following topics:</p>
+            <ul>
+                <li>
+                    <p>Applying warping and molding techniques to images</p>
+                </li>
+                <li>
+                    <p>Filters and lighting effects</p>
+                </li>
+                <li>
+                    <p>Understanding and utilizing blending modes</p>
+                </li>
+                <li>
+                    <p>Automating and batch processing images</p>
+                </li>
+            </ul>
+            <h2>Prerequisites and Requirements</h2>
+            <ul>
+                <li>
+                    <p>Basic experience with Photoshop and its core concepts</p>
+                </li>
+                <li>
+                    <p>Access to Adobe Photoshop CC</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="topic">
+
+            <h1>Graphics Molding</h1>
+            <p>Let's suppose that we are the owners of a design firm. A client requests their logo to be placed on coffee mugs to promote their brand. Before they purchase the mugs, they want to see a mock-up of what they may look like.</p>
+            <p>Using a combination of Photoshop's transformation tools and blending modes we are able to achieve a seamless product mock-up. These tools will mold and blend our client's logo onto a blank coffee mug.</p>
+            <h2>Placing Objects</h2>
+            <p>To begin this project, we first need to combine our mug and logo images into one file. To do this, we place an external file inside within our current document.</p>
+            <div class="side-image-large"><img src="images/objects-1.png" alt="mug"></div>
+            <ol class="instruction-list">
+                <li>
+                    <p>First, we will open an image of a blank mug. From the menu bar, choose <span class="type-text">File > Open.</span> Navigate to the class files folder, then open <span class="type-text">mug.jpg</span>, found under <span class="type-text">graphics-molding.</span></p>
+                </li>
+                <li>
+                    <p>Next, we will add our logo. From the menu bar, choose <span class="type-text">File > Place Linked</span>. Navigate to the class files folder and choose <span class="type-text">atomlogo.png</span> under <span class="type-text">graphics-molding</span>.</p>
+                </li>
+                <li>
+                    <p>Click and drag the logo to position it in the center of the coffee mug. To resize the logo, hold the shift key, then click and drag on a corner of the image.</p>
+                </li>
+                <li>
+                    <p>Once your changes are complete, confirm them by clicking the check mark at the top of the window, or by pressing enter on your keyboard.</p>
+                </li>
+            </ol>
+            <div class="centered-image-tiny"><img src="images/general-checkmark.png" alt="The Confirm Checkbox"></div>
+            <div class="side-image-medium"><img src="images/objects-renamelayers.png" alt="The layers panel"></div>
+            <p>In the layers panel, notice that Photoshop automatically created a new layer for the logo and named it using the image's file name. If you would like to change the name of the layer, double-click on the name. Finally, we would like to save our project as a Photoshop file, which you can do by going to <span class="type-text">File > Save As</span> in the menu bar.</p>
+            <h2>Warping Objects</h2>
+            <p>Photoshop includes a variety of tools that allow you to subtly or drastically transform an object. Using Photoshop's transform tools we can further manipulate the logo to imitate the slight curve of the coffee mug.</p>
+            <img class="float-right border small" src="images/objects-2.png" alt="Example of a warped object">
+            <ol class="instruction-list">
+                <li>
+                    <p>From the menu bar, choose <span class="type-text">Edit > Transform > Warp</span>. A grid with black squares (points) at the corners and black circles (control handles) along the edges will appear over the logo, as shown in the image on the right.</p>
+                </li>
+                <li>
+                    <p>To warp the logo, click and drag individual points and control handles. Warp the logo to match the curvature of the mug.</p>
+                </li>
+                <li>
+                    <p>When finished, confirm your changes by clicking the check mark icon, or by pressing enter on your keyboard.</p>
+                </li>
+            </ol>
+            <h2>Changing Blending Modes</h2>
+            <div class="side-image-large"><img src="images/objects-blendingmode.png" alt="layers"></div>
+            <p>To further integrate the logo into the coffee mug, we will remove its white background by changing its <strong>blending mode</strong>. Blending modes change that way that different layers interact with one another when overlapped. Typically, pixels on a top layer will simply cover up pixels on a layer below it. However, blending modes allow layers to interact more dynamically.</p>
+            <p>We will talk about blending modes in-depth later in this manual.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In the layers panel, select the layer containing our logo. </p>
+                </li>
+                <li>
+                    <p>Click the blending modes drop-down, then select "Multiply".</p>
+                </li>
+            </ol>
+            <p>The logo should now look like this:</p>
+            <div class="centered-image-small"><img src="images/objects-3.png" alt="logo"></div>
+            <h2>Editing Linked Objects</h2>
+            <p>When you place a linked object into a Photoshop document, Photoshop automatically creates a smart object layer. A smart object layer can be linked to an image file outside of Photoshop. A linked smart object is indicated by a small link symbol in the layers panel.</p>
+            <div class="centered-image-small"><img src="images/objects-linkicon.png" alt="linked objects"></div>
+            <p>Among other features, a linked smart object allows you to make edits to the object, and have those edits appear in all files that contain that object. In this exercise, we will explore this feature of smart objects.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In the menu bar, choose <span class="type-text">File > Open</span>, then open the logo image from the class files.</p>
+                </li> <img class="sidebar-icon" src="images/icon-quickselection.png" alt="quick selection tool">
+                <li>
+                    <p>In the tools panel, select the <strong>quick selection tool</strong>.</p>
+                </li>
+                <div class="side-image-large"><img src="images/objects-brushoptions.png" alt="brush size"></div>
+                <li>
+                    <p>In the brush options panel, change the size of the brush to about 60px. This way, the brush is slightly smaller than the circle in the center of the atom logo.</p>
+                </li>
+                <li>
+                    <p>Click once on the black circle in the center of the atom logo to select it.</p>
+                </li>
+                <li>
+                    <p>We will now fill our selection with a green color using the paint bucket tool.</p> <img class="sidebar-icon" src="images/icon-paintbucket.png" alt="paint tool">
+                    <ol class="instruction-list" >
+                        <li>
+                            <p>Select the paint bucket tool from the toolbar.</p>
+                        </li>
+                        <li>
+                            <p>In the options bar, make sure the fill source is set to "Foreground". When we use our paint bucket tool, it will now fill the selected area with our foreground color.</p>
+                        </li>
+                        <div class="centered-image-small"><img src="images/objects-fill.png" alt="fill tool"></div>
+                        <div class="side-image-small"><img src="images/objects-colorswatches.png" alt="color picker"></div>
+                        <li>
+                            <p>To change the foreground color, double-click the foreground color swatch near the bottom of the tools panel, then use the color picker to select a new color.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p>Use the paint bucket tool to change the color of the black circle in the center of our image.</p>
+                </li>
+                <div class="centered-image-small"><img src="images/objects-greencircle.png" alt="image example"></div>
+            </ol>
+            <p>Now that we've changed our original image, we can save it (<span class="type-text">File > Save</span>) and return to our original project. <strong>Notice the changes we made to the atom logo are now visible in our project.</strong></p>
+            <p>This dynamic linking feature is helpful if we use repeatedly use an image across multiple Photoshop projects. If we need to change the image in all of our Photoshop projects, all we need to do is edit the original image file, and it will update everywhere else.</p>
+        </section>
+
+        <section class="topic">
+
+            <h1>Lighting Effects</h1>
+            <p>Photoshop lighting effects allow you to add the appearance of additional light sources to your image. Lighting effects can be used to compensate for poor lighting, or to add a dramatic flair to a scene.</p>
+            <h2>Adding a Point Light Source</h2>
+            <p>In this exercise, we will make an image look more dramatic by adding a point light source.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Open the image <span class="type-text">sunset.jpg</span> from the class files folder, under <span class="type-text">lighting-effects</span>. Before making changes to the image, you may wish to save a copy as a Photoshop file, using <span class="type-text">File > Save As</span>.</p>
+                </li>
+                <li>
+                    <p>In the menu bar, choose <span class="type-text">Filter > Render > Lighting Effects</span>. We are brought into a new interface, with new panels on the right-hand side of the screen.</p>
+                </li>
+            </ol>
+            <div class="side-image-large"><img src="images/lighting-types.png" alt="properties panel"></div>
+            <p>In the properties panel, there is a drop-down menu to choose the type of light source we want to add to our image. Below is a brief explanation of each type of light source.</p>
+            <ul>
+                <li>
+                    <p><strong>Point:</strong> Adds a light source as though it were shining toward a particular point in the image.</p>
+                </li>
+                <li>
+                    <p><strong>Spot:</strong> Adds a light source that only reveals a particular area of the image, similar to a spotlight on a stage.</p>
+                </li>
+                <li>
+                    <p><strong>Infinite:</strong> Adds a light source that equally lights the entire region of the image.</p>
+                </li>
+            </ul>
+            <p>In the following example, we will be using a <em>point</em> light, however, feel free to experiment with all three on your own.</p>
+            <div class="side-image-medium"><img src="images/lighting-pin.png" alt="point light"></div>
+            <ol class="instruction-list">
+                <li>
+                    <p>When opening the lighting effects interface, Photoshop will automatically add a light source to your image. At the top of the properties panel, make sure the type of light is set to "Point".</p>
+                </li>
+                <li>
+                    <p>Now that we've added a light source, you will notice a large green circle, as well as a small black pin in the center of the circle. Move the light source by clicking and dragging the black pin.</p>
+                </li>
+                <li>
+                    <p>Adjust the size of the slight source by clicking and dragging on the green circle. In our example, we placed the light source directly over the silhouette, and adjusted its size to encompass the upper-half of the figure.</p>
+                </li>
+            </ol>
+            <div class="side-image-large"><img src="images/lighting-properties-1.png" alt="properties panel"></div>
+            <p>In the properties panel, we have a series of settings to adjust the look and feel of our light source.</p>
+            <ul>
+                <li>
+                    <p><strong>Color:</strong> Allows you to change the color of the light source. Double-clicking on the swatch will open a color picker window.</p>
+                </li>
+                <li>
+                    <p><strong>Intensity:</strong> Controls the brightness of the light source.</p>
+                </li>
+                <li>
+                    <p><strong>Colorize:</strong> Adds a color tint to the entire image, not just the lighting source. Double-clicking on the swatch will open a color picker.</p>
+                </li>
+                <li>
+                    <p><strong>Exposure:</strong> Refers to the amount of light in which a photo was taken. High values emulate bright lighting, low values emulate dim lighting.</p>
+                </li>
+                <li>
+                    <p><strong>Gloss and Metallic:</strong> Control the way that light appears to reflect off surfaces. In our example, these settings will have little effect.</p>
+                </li>
+                <li>
+                    <p><strong>Ambience:</strong> Controls the intensity of the tint selected in the colorize section.</p>
+                </li>
+            </ul>
+            <p>In our example, we will change the settings to match those in the image to the right. Below is a comparison of our image, before and after lighting effects are applied. With a simple lighting effect, we are able to significantly change the mood of our image.</p>
+            <div class="sidebyside-image-large"> <img src="images/lighting-noedits.png" alt="example 1"> <img src="images/lighting-edits-1.png" alt="example 4"></div>
+            <div class="side-image-large"><img src="images/lighting-properties-2.png" alt="example 2"></div>
+            <p>If we want, we can adjust our settings in the properties panel again to add a different effect to our image. In this case, we made our light source blue, and increased the gloss and metallic sliders. If you wish to try this for yourself, you may copy the settings in the image on the right.</p>
+            <div class="centered-image-medium"><img src="images/lighting-edits-2.png" alt="example 3"></div>
+            <p>When you're happy with your changes, click OK at in the options bar at the top of the window.</p>
+            <div class="centered-image-small"><img src="images/lighting-confirmation.png" alt="confirmation"></div>
+            <h2>Adding Multiple Light Sources</h2>
+            <p>While using the lighting effects interface, we can combine multiple light sources to create a more complex effect. In this exercise, we will be adding three spotlights to an image to give it the following effect:</p>
+            <div class="sidebyside-image-large"> <img src="images/lighting-originalimage.png" alt="light sources 1"> <img src="images/lighting-finalimage.png" alt="light sources 2"></div>
+            <ol class="instruction-list">
+                <li>
+                    <p>From the class files folder, under <span class="type-text">lighting-effects</span>, open <span class="type-text">gallery.jpg</span>. Then, open the lighting effects interface by going to <span class="type-text">Filter > Render > Lighting Effects</span>.</p>
+                </li>
+                <li>
+                    <p>Photoshop will automatically add a single light source to your image. In the properties panel, change the <em>type</em> of light source to "Spot".</p>
+                </li>
+                <div class="side-image-large"><img src="images/lighting-spotlight-position.png" alt="example image 1"></div>
+                <li>
+                    <p>Position the light source to match the example in the image to the right.</p>
+                    <ol class="instruction-list" >
+                        <li>
+                            <p>Move the light by clicking and dragging the black pin to the center of the image.</p>
+                        </li>
+                        <li>
+                            <p>Click and drag the handles on either side of the light source to adjust its width and height.</p>
+                        </li>
+                        <div class="centered-image-tiny"><img src="images/lighting-handle.png" alt="example image 2"></div>
+                        <li>
+                            <p>Rotate the light by hovering your cursor immediately outside of the handles, then click and drag.</p>
+                        </li>
+                    </ol>
+                </li>
+                <div class="side-image-large"><img src="images/lighting-properties-3.png" alt="options bar"></div>
+                <li>
+                    <p>Change the color, ambience, and other light properties in the properties panel to your liking. The settings we chose are displayed on the right.</p>
+                </li>
+                <li>
+                    <p>In the options bar, there are three buttons that allow you to create additional light sources. Click the spotlight button to add a new spotlight.</p>
+                    <div class="centered-image-small"><img src="images/lighting-newlight.png" alt="lights"></div>
+                    <p>You should now see two spot lights listed in the "Lights" panel, which can be found below the properties panel.</p>
+                    <div class="centered-image-small"><img src="images/lighting-multiplelights.png" alt="spot light"></div>
+                </li>
+                <li>
+                    <p>Select the second light, and using the same process as above, position it to mirror the first light. Once you have done this, adjust the light's properties to match the first light, except for the color. In our example, we gave our second spot light a blue color.</p>
+                    <p>Your image should now look similar to the following:</p>
+                </li>
+                <div class="sidebar-note">
+                    <h2>Resetting a Light Source</h2>
+                    <p>If you ever need to reset a light to its original settings, use the "reset light" button in the options panel.</p> <img src="images/lighting-resetlight.png" alt="resetting light source"> </div>
+                <div class="centered-image-medium"><img src="images/lighting-spotlight-2.png" alt="example light 1"></div>
+                <li>
+                    <p>Repeat this process once again to add a third spotlight in the center of the image, completing the effect. Once your are finished editing your photo, click OK in the options bar to confirm your changes.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/lighting-finalimage.png" alt="third spotlight"></div>
+            </ol>
+        </section>
+        <section class="topic">
+
+            <h1>Content-Aware Features</h1>
+            <p>Content-awareness is an algorithm used in multiple Photoshop features. It analyzes detail in an image in order to make decisions about how to transform the image. In this section, we will explore two content-aware features: <strong>content-aware fill</strong> and <strong>content-aware scale</strong>.</p>
+            <h2>Content-Aware Fill</h2>
+            <p>Content-aware fill is used to remove objects from an image by filling in the unwanted area with content from the surrounding area. While this feature is impressive, it is not perfect, and works best in abstract or heavily patterned areas of an image.</p>
+
+            <div class="reference">
+                <h2>Content-Aware Fill</h2>
+                <p>Allows you to automatically fill in part of an image with content based on the texture and contents of surrounding areas.</p>
+                <p>Works best in areas of consistent pattern or texture.</p>
+                <p>With a selection made, use <strong>Edit > Fill</strong>, and select the Content-Aware option from the <em>Contents</em> dropdown.</p>
+            </div>
+            <ol class="instruction-list">
+                <li>
+                    <p>Open <span class="type-text">canoe.jpg</span> from the <span class="type-text">content-aware</span> folder in the class files. If you'd like, you may save a copy of this image as a Photoshop file before continuing.</p>
+                </li> <img class="sidebar-icon" src="images/icon-lasso.png" alt="lasso tool">
+                <li>
+                    <p>In the tools panel, select the lasso tool. Use the lasso tool to click and drag a loose selection around the red life-preserver and its shadow, as pictured below.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/contentaware-selection.png" alt="lasso tool example"> </div>
+                <div class="sidebar-note">
+                    <h2>Deselecting Selections</h2>
+                    <p>If you ever have a selection, and want to quickly deselect, press <kbd>command</kbd><kbd>d</kbd> on your keyboard. For Windows users, this shortcut is <kbd>control</kbd><kbd>d</kbd>.</p>
+                </div>
+                <li>
+                    <p>In the menu bar, go to <span class="type-text">Edit > Fill</span>.</p>
+                </li>
+                <li>
+                    <p>In the fill menu, make sure the contents of the fill is set to "Content-Aware". This way, Photoshop will know to fill the selected region using its content-aware algorithm.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/contentaware-fill.png" alt="fill menu"></div>
+                <li>
+                    <p>Click OK. The red life preserver should disappear!</p>
+                </li>
+            </ol>
+            <p>This Photoshop feature can be used a wide range of scenarios. If you're up for an extra challenge, see if you can make the entire canoe vanish using content-aware fill!</p>
+            <h2>Content-Aware Scale</h2>
+            <p>Content-Aware Scale allows you to re-size images disproportionately without distorting some of the important details. Content-aware scale attempts to find important parts of an image, such as people, and preserves proportionality in those elements, while allowing for distortion of less important elements, such as background textures.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Open <span class="type-text">state-street.jpg</span> from the <span class="type-text">content-aware</span> folder in our class files. If you'd like, you may save a copy of this document as a Photoshop file before continuing.</p>
+                </li>
+                <li>
+                    <p>Be default, Photoshop places the image in a locked layer named "Background". In order to make changes, we first need to unlock the layer. In the layers panel, click the lock icon next to the background layer.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/contentaware-layerlock.png" alt="background"></div>
+                <li>
+                    <p>Go to the menu bar, and choose <span class="type-text">Edit > Content Aware Scale</span>.</p>
+                </li>
+                <li>
+                    <p>Click and drag the right and left sides of the image inward to make it narrower. As you re-size, some elements, such as the saxophone player and the stack of buckets remain proportional, while others, such as the sidewalk segments and doors become distorted.</p>
+                </li>
+                <div class="centered-image-large"><img src="images/contentaware-scale-1.png" alt="example photo"></div>
+                <div class="side-image-small"><img src="images/general-checkmark.png" alt="option bar"></div>
+                <li>
+                    <p>When you are finished, select the check mark in the options bar, or press enter on your keyboard.</p>
+                </li> <img class="sidebar-icon" src="images/icon-crop.png" alt="crop tool">
+                <li>
+                    <p>Notice that Photoshop does not re-size the canvas along with the image. You have scaled your image, but the document remains at its original size, potentially cutting of portions of your image or leaving areas of transparent pixels (indicated by the gray/white checkerboard pattern). To fix this, feel free to use the crop tool to remove excess space.</p>
+                </li>
+                <div class="centered-image-large"><img src="images/contentaware-scale-2.png" alt="example photo"></div>
+            </ol>
+        </section>
+        <section class="topic">
+            <h1>Advanced Warping</h1>
+            <p>Photoshop has a series of advanced warping and transformation tools that allow you to change objects and shift perspectives within photos. In this section we will explore two tools, <strong>puppet warp</strong> and <strong>perspective warp</strong>.</p>
+            <h2>Puppet Warp</h2>
+            <p>Puppet warp is a Photoshop feature that allows you to manipulate joints and angles in photographs while keeping a sense of realism to the image.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Open the file named <span class="type-text">puppet-warp.psd</span> from the class files folder, under <span class="type-text">advanced-warping.</span></p>
+                </li>
+                <li>
+                    <p>Notice that this document contains two layers, one called "Puppet Warp" and one called "Background". Make sure that the "Puppet Warp" layer is selected.</p>
+                </li>
+                <div class="centered-image-small"><img src="images/contentaware-layers-1.png" alt="puppet wrap"></div>
+                <li>
+                    <p>Naviage to <span class="type-text">Edit > Puppet Warp</span> in the menu bar.</p>
+                </li>
+                <li>
+                    <p>In the options bar, deselect the option "Show Mesh". This will hide the mesh pattern overlaid on the image, making it easier to place warp points.</p>
+                </li>
+                <div class="centered-image-tiny"><img src="images/contentaware-showmesh.png" alt="show mesh"></div>
+                <div class="side-image-medium"><img src="images/contentaware-warppins.png" alt="example"></div>
+                <li>
+                    <p>Notice that your cursor has turned into a pin icon. Click on the subject's body to add "pins" at joints, such as elbows, shoulders, knees, and hips. The pins act as place markers for pivoting the joints.</p>
+                </li>
+                <li>
+                    <p>Click and drag the pin points to manipulate the structure of the body. To delete a pin, click the pin and press the delete key on your keyboard. You can add new pins at any time by clicking a spot that currently has no pins.</p>
+                </li>
+                <li>
+                    <p>When you are finished manipulating your image, you may confirm the changes by clicking the check mark in the options bar, or by pressing the enter key on your keyboard. Note that once you apply a puppet warp, you cannot edit it, but you can re-warp the image.</p>
+                </li>
+            </ol>
+            <h2>Perspective Warp</h2>
+            <p>Another advanced warping tool, perspective warp, allows you to easily adjust perspective in images. This feature works best for images with straight lines and flat surfaces, such as architectural images and photos of buildings.</p>
+            <p>In this exercise, we will be outlining the shape of a building, then using that outline to manipulate and distort the image.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In the class files folder, under <span class="type-text">advanced-warping</span>, open <span class="type-text">building.jpg</span>.</p>
+                </li>
+                <li>
+                    <p>Navigate to <span class="type-text">Edit > Perspective Warp</span> in the menu bar.</p>
+                </li>
+                <div class="side-image-large"><img src="images/warping-pins.png" alt="example rectangle"></div>
+                <li>
+                    <p>Click and drag on the image to create a rectangle. Once your rectangle has been created, click and drag the pins on each corner so that the rectangle covers one face of the building.</p>
+                </li>
+                <li>
+                    <p>Click and drag to create a second rectangle that will cover- the other face of the building. When creating your second rectangle, it should automatically align itself with the first. For an example, see the image to the right.</p>
+                </li>
+                <li>
+                    <p>Once you have finished outlining the building, change the mode from "Layout" to "Warp" in the options bar.</p>
+                </li>
+                <div class="centered-image-tiny"><img src="images/warping-options-1.png" alt="layout and wrap"></div>
+                <li>
+                    <p>You may now click and drag each of the pins on the image to warp your perspective of the building. Take a few moments to explore the different possibilities when warping the building.</p>
+                </li>
+            </ol>
+            <p>Depending on how you warped your building, there may be excess empty space in your image, like in the example pictured below. Empty space is represented by the white/gray checkerboard pattern in the background.</p>
+            <div class="centered-image-small"><img src="images/warping-transformation-1.png" alt="example rectangle 2"></div>
+            <p><strong>The following exercise is optional.</strong> To fill in the empty space of our image, we will be using the eraser and fill tools.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In the layers panel, create a new blank layer below the layer containing our building.</p>
+                </li>
+                <div class="centered-image-small"><img src="images/warping-layerspanel.png" alt="layers"></div>
+                <li>
+                    <p>At the bottom of the tools panel are two swatches, representing the foreground color and background color. Double click on the swatch in front to change the foreground color.</p>
+                </li>
+                <li>
+                    <p>When the color picker window opens, hover your mouse over the image. Your mouse will turn into an eye dropper, meaning you can click anywhere on the image to select a color. Pick a sky blue color by clicking on the sky in the image.</p>
+                </li> <img class="sidebar-icon" src="images/icon-paintbucket.png" alt="fill tool">
+                <li>
+                    <p>From the tools panel, select the fill tool. While the bottom layer is selected in the layers panel, click on the image to fill that layer with a blue background.</p>
+                    <p>Notice that while the image no longer has empty space, there is now a noticeable line between the sky in the image, and the background fill layer we just created. We can blend the two layers together nicely using the eraser tool.</p>
+                </li> <img class="sidebar-icon" src="images/icon-eraser.png" alt="eraser tool">
+                <div class="side-image-medium"><img src="images/warping-retouching-2.png" alt="opacity"></div>
+                <li>
+                    <p>Select the eraser tool from the tools panel, and change its size and opacity under the brush options panel.</p>
+                    <ol class="instruction-list">
+                        <li>
+                            <p>Change the opacity of the eraser from <strong>100%</strong> to <strong>35%</strong></p>
+                        </li>
+                        <li>
+                            <p>Change the size of the eraser to roughly <strong>300px</strong>, and set the hardness near <strong>30%</strong></p>
+                        </li>
+                    </ol>
+                </li>
+                <div class="centered-image-medium"><img src="images/warping-retouching-1.png" alt="size of eraser"></div>
+                <li>
+                    <p>We are now ready to blend the image with our background layer. While the top layer is selected, carefully use the eraser along the edges of image, to blend the sky into our background layer.</p>
+                </li>
+                <li>
+                    <p>Once you are satisfied with the results, click the check mark in the options bar to confirm your changes.</p>
+                </li>
+            </ol>
+            <p>Here are two examples of two changes we made to our building using the perspective warp tool, after we filled in the empty space left behind from the warp. Your image should look similar to one of these:</p>
+            <div class="sidebyside-image-small"> <img src="images/warping-example-1.png" alt='example 1'> <img src="images/warping-example-2.png" alt="example 2"> </div>
+        </section>
+        <section class="topic">
+            <h1>Photographic Blur Gallery</h1>
+            <p>The photographic blur gallery offers three customizable blur filters: iris blur, tilt-shift blur and field blur. Each of these filters is intended to digitally mimic an effect typically achieved in traditional photography through the use of special lenses or camera techniques.</p>
+            <h2>Iris Blur</h2>
+            <p>The iris blur applies an effect that starts with a sharp center and gradually blurs as you move toward the edges of an image. Iris blur is often used to enhance focus on objects in the foreground of an image, while blurring out objects in the background. In this exercise, we will explore the iris blur filter.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>From the class files folder, open <span class="type-text">food.jpg</span>, found under <span class="type-text">photo-blur</span>. If you wish, you may save a copy of the file before continuing.</p>
+                </li>
+                <li>
+                    <p>In the menu bar, navigate to <span class="type-text">Filter > Blur Gallery > Iris Blur</span>.</p>
+                </li>
+            </ol>
+            <p>The filter gallery panel should now open. In the center of your image, you will find what's called a <strong>blur pin</strong>. It is automatically placed at the center of your image. The blur pin is used to adjust the size, placement, and effect of the blur. </p>
+            <p>There are several components to a blur pin on your photo, each controlling different aspects of the blur. They are outlined below.</p>
+            <ul>
+                <li>
+                    <p>The bull's eye at the center of the pin defines the area of sharpest focus.</p>
+                </li>
+                <div class="centered-image-tiny"><img src="images/blur-pin-1.png" alt="bulls eye"></div>
+                <li>
+                    <p>The black and white ring around the bull's eye, called the <strong>blur handle</strong>, adjusts the size of the blur.</p>
+                </li>
+                <div class="centered-image-tiny"><img src="images/blur-pin-2.png" alt="blur handle"></div>
+                <li>
+                    <p>The gray oval that encloses the blur pin defines the <strong>blur area</strong>, the boundary line where the image becomes fully blurred. </p>
+                </li>
+                <div class="centered-image-tiny"><img src="images/blur-pin-3.png" alt="blur area"></div>
+                <li>
+                    <p>The white circles around the blur handle define the <strong>fade area</strong>, which is the transition between the sharp and completely blurred portions of the image.</p>
+                </li>
+                <div class="centered-image-tiny"><img src="images/blur-pin-4.png" alt="fade area"></div>
+            </ul>
+            <p>Now that we understand the interface for modifying a blur effect, let's use it to change our image.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Click and drag the bull's eye of the pin to adjust the focus point on a specific item in the photo.</p>
+                </li>
+                <li>
+                    <p>Click and drag the blur handle clockwise to increase the size of the blur.</p>
+                </li>
+                <li>
+                    <p>Hover over the gray oval until a double ended arrow appears, then click and drag the oval outward to expand the blur area boundary.</p>
+                </li>
+                <li>
+                    <p>Click on one of the inner white circles, and drag outwards to expand the fade area, creating a more subtle transition.</p>
+                </li>
+                <li>
+                    <p>When you're satisfied, confirm your changes by clicking OK at the top of the blur gallery panel.</p>
+                </li>
+            </ol>
+            <div class="centered-image-medium"><img src="images/blur-iris.png" alt="example"></div>
+            <h2>Field Blur</h2>
+            <p>The field blur filter allows you to build a custom blur effect by defining multiple blur points across an image with different blur settings. The approach produces a sophisticated matrix of adjustable blur/sharpness areas which can easily be tweaked and adjusted.</p>
+            <p>In this exercise, we will be adding multiple blur pins to our image, and adjusting each one individually.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>From the class files folder, open <span class="type-text">terrace.jpg</span>, found under <span class="type-text">photo-blur</span>. If you wish, you may save a copy of the file before continuing.</p>
+                </li>
+                <li>
+                    <p>In the menu bar, go to <span class="type-text">Filter > Blur Gallery > Field Blur</span>.</p>
+                </li>
+                <li>
+                    <p>When the blur gallery opens, you'll notice Photoshop automatically places a blur pin in the center of the image. However, as we learned in the previous exercise, blur pins can be moved. Click the bull's eye in the center of the blur pin and drag to place it near the left edge of the image.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/blur-field-1.png" alt="example blur field"></div>
+                <li>
+                    <p>Click and drag the blur handle to increase the amount of blur for this pin. In our example, we are increasing the blur to about 40px. Alternatively, in the blur tools panel you can type "40" into the blur field.</p>
+                </li>
+            </ol>
+            <div class="sidebar-note">
+                <h2>Visualizing a Blur</h2>
+                <p>By pressing <kbd>m</kbd> on your keyboard, you are able to see a grayscale visualization of the blur.</p></div>
+            <p>As of now, there is only one blur pin, meaning the blur will affect the entire image evenly. We can modify the blur effect for different parts of our image by adding more blur pins. </p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Hover over the image and notice that your cursor appears as a pin icon. This means Photoshop is ready to place additional blur pins when you click. Click on the face of the subject to place another blur pin.</p>
+                </li>
+                <li>
+                    <p>To bring the subject's face into sharp focus, set the blur amount for this pin to 0px. You can do this by clicking and dragging the blur handle, or typing the value into the blur tools panel on the right.</p>
+                </li>
+                <li>
+                    <p>The transition between our first and second blur pins is not very smooth. To fix this, click to add a pin halfway between the two existing pins. Set the blur amount for this pin to 25px.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/blur-field-2.png" alt="example blur field 2"></div>
+                <li>
+                    <p>Practice adding new blur pins and edit existing pins to see what effects you can create on the image. To select an existing blur pin, simply click the bull's eye in the center of the pin.</p>
+                </li>
+                <li>
+                    <p>When you're satisfied, confirm your changes by clicking OK at the top of the blur gallery panel.</p>
+                </li>
+            </ol>
+            <h2>Tilt-Shift Blur</h2>
+            <p>In photography, a tilt-shift lens is used to manipulate the perspective depth and angle in an image. This technique can produce a range of effects, but it is often used to make a landscape scene appear "miniaturized." The effect of a tilt-shift lens can be mimicked using the tilt-shift blur filter.</p>
+            <p>In the following exercise we will practice adding a tilt-shift blur to a photo.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>From the class files folder, open <span class="type-text">beach.jpg</span>, found under <span class="type-text">photo-blug</span>. If you wish, you may save a copy of the file before continuing.</p>
+                </li>
+                <li>
+                    <p>In the menu bar, navigate to <span class="type-text">Filter > Blur Gallery > Tilt-Shift</span>.</p>
+                </li>
+                <li>
+                    <p>As in the previous blur exercises, Photoshop automatically places a blur pin in the center of the image. Click and drag the blur pin towards the top of the photo, near the swimmers.</p>
+                </li>
+            </ol>
+            <p>Our goal will be to make the horizon appear in sharp focus, with the foreground becoming blurred towards the bottom of the photo. The tilt-shift blur pins have a slightly different interface than the blur pins we've used before. The different blur areas are outlined in the diagram below.</p>
+            <div class="centered-image-large"><img src="images/blur-tiltdiagram.png" alt="blur areas"></div>
+            <ol class="instruction-list">
+                <li>
+                    <p>Adjust the size of the sharp area, by clicking and dragging on the solid lines immediately above and below the bull's eye until you get the desired result.</p>
+                </li>
+                <li>
+                    <p>Next, we'll change the angle of the blur. Hover over one of the white circles on the fade area boundy lines until a curved, double-ended arrow appears. Click and drag to rotate the blur, and match it to the angle of the horizon in the image.</p>
+                </li>
+                <div class="centered-image-large"><img src="images/blur-tiltshift-1.png" alt="angle of blur"></div>
+                <li>
+                    <p>Set the blur amount for this pin by dragging the blur handle or typing the value into the blur tools panel on the right.</p>
+                </li>
+                <li>
+                    <p>Click and drag each of the dashed lines toward the bull's eye slightly to expand the blur area.</p>
+                </li>
+                <li>
+                    <p>When you're satisfied, confirm your changes by clicking "OK" at the top of the blur gallery panel.</p>
+                </li>
+            </ol>
+            <p>Congratulations on completing the section about blurs! Here is the photo, before and after our blur filter is applied:</p>
+            <div class="sidebyside-image-large"><img src="images/blur-beachoriginal.jpg" alt="before blur"> <img src="images/blur-beachedit.jpg" alt="after blur"></div>
+            <p>As you can tell, the blur effect is subtle. While editing photos, always make sure your effects are nonobvious and don't dramatically distract the viewer. In this example, our goal was gently draw the viewer's attention to the top of the photo, but the blur itself is not distracting.</p>
+        </section>
+        <section class="topic">
+
+
+            <h1>Blending Modes</h1>
+            <h2>What Are Blending Modes?</h2>
+            <p>Blending modes are a powerful Photoshop tool which allow us to determine the way two layers interact, using different mathematical calculations. Before jumping into the use of blending modes, we want to quickly review how layers work. Take a look at the image below.</p>
+            <div class="centered-image-small"><img src="images/blendingmodes-normal.png" alt="blending mode image"></div>
+            <p>In the image above, we see an orange circle resting atop a photo of the ocean. We can assume that the circle and the picture are on two separate layers. The circle seems to be on the top layer, because it is covering up the image of the ocean below. If we were to separate the layers, and look at them from a different angle, it could look something like this:</p>
+            <div class="centered-image-large"> <img src="images/blendingmodes-explanation.png" alt="top and bottom layer"></div>
+            <p>As we can see, the layers stack on top of each other, and by default, the top layer will automatically cover up the bottom layer. By changing the <strong>blending mode</strong> of the top layer, it can interact with the bottom layer in a variety of ways. Let's look at some examples.</p>
+            <div class="sidebyside-image-small"><img src="images/blendingmodes-color.png" alt="color blending mode"> <img src="images/blendingmodes-difference.png" alt='subtract blending mode'>
+                <p>Example of "Color" (left) and "Subtract" (right) blending modes.</p>
+            </div>
+            <p>On the left, we used the "Color" blending mode, which takes the luminance of the base color (the blue of the ocean), and combines it with the hue/saturation of the blend color (the orange of the circle). On the right, we used the "Subtract" blending mode, which looks at the color information in each channel (red, green, blue) and subtracts the blend color from the base color.</p>
+            <div class="sidebyside-image-small"><img src="images/blendingmodes-multiply.png" alt="multiply blending mode"> <img src="images/blendingmodes-subtract.png" alt="difference blending mode">
+                <p>Example of "Multiply" (left) and "Difference" (right) blending modes.</p>
+            </div>
+            <p>Above are two more examples of commonly used blending modes. For a full list of blending modes and their descriptions, see the blending modes glossary at the end of this manual.</p>
+            <h2>Creating Custom Filters</h2>
+            <p>Using our new understanding of blending modes, we are going to create a custom image filter that makes an image look vintage. Below is an example of our image, before and after our vintage filter is applied.</p>
+            <div class="sidebyside-image-large"> <img src="images/blendingmodes-originalimage.png" alt="before vintage filter"> <img src="images/blendingmodes-final-edit.png" alt="after blending filter"></div>
+            <p>In this exercise, we will also be using a new tool, called the gradient tool.</p>
+
+            <div class="reference">
+                <img src="images/icon-gradient.png" alt="gradient tool">
+                <h3>Gradient Tool</h3>
+                <p>Used to draw linear, radial, angular, reflected or diamond gradients. After customizing a gradient, a user can click and drag in the workspace to create a gradient on their image. </p>
+            </div>
+            <ol class="instruction-list">
+                <li>
+                    <p>From the class files folder, open <span class="type-text">science-hall.jpg</span> and <span class="type-text">texture.jpg</span>.</p>
+                </li>
+                <li>
+                    <p>By default, Photoshop will lock the layer containing our image. In the layers panel, unlock the bottom layer, then create a copy of it. To copy a layer, <strong>click and drag it into the new layer icon</strong> at the bottom of the layers panel.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/blendingmodes-layers-1.png" alt="layer panel"></div>
+                <div class="side-image-large"><img src="images/blendingmodes-filtergallery-2.png" alt="filter gallery"></div>
+                <li>
+                    <p>While the top layer is selected, navigate to <span class="type-text">Filter > Filter Gallery</span> in the menu bar.</p>
+                </li>
+                <li>
+                    <p>In the filter gallery, select the "Charcoal" effect. Adjust the <strong>thickness to 1</strong>, set the <strong>detail to 5</strong>, and set the <strong>light/dark balance to 50</strong>, as seen in the image on the right. When you are finished, click OK to confirm the changes.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/blendingmodes-filtergallery-1.png" alt="sketch"></div>
+                <li>
+                    <p>Change the blending mode of the top layer to <strong>"Soft Light"</strong>.</p>
+                </li>
+            </ol>
+            <p>We have now added and blended our first layer. Before finishing the effect, we will add one more layer to add texture, and one to add a vintage color tint.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>From the menu bar, navigate to <span class="type-text">File &gt; Place Embedded</span>, and insert <span class="type-text">texture.jpg</span> under the <span class="type-text">blending-modes</span> folder. Resize the image to fill the entire workspace.</p>
+                </li>
+                <li>
+                    <p>Change the opacity of the texture layer to <strong>38%</strong>, and change the blending mode to <strong>"Pin Light"</strong>. You should now have three layers in your layers panel, similar to the following:</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/blendingmodes-layers-2.png" alt="pin light"></div>
+            </ol>
+            <p>To finish off the effect on our image, we're going to add a slight yellow tint to the image, by adding a color gradient and blending it.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Create a new layer in the layers panel, and place it above the other layers.</p>
+                </li> <img class="sidebar-icon" src="images/icon-gradient.png" alt="gradient tool">
+                <div class="side-image-large"><img src="images/blendingmodes-gradient-1.png" alt="gradient editor"></div>
+                <li>
+                    <p>From the toolbar, select the gradient tool. (The gradient tool may be hidden under the paint bucket tool.) </p>
+                    <p> Once the gradient tool has been selected, navigate to the options bar and click on the large swatch. This will open up the gradient editor. </p>
+                </li>
+                <div class="centered-image-medium"><img src="images/blendingmodes-gradient-2.png" alt="gradient editor"></div>
+                <li>
+                    <p>Change the colors of the gradient by selecting the color swatches on either side of the gradient preview near the bottom of the window. In our example, we are using a gray and dark yellow color. Click OK once you're satisfied with your gradient.</p>
+                </li>
+                <li>
+                    <p>Apply the gradient by clicking and dragging aross the empty layer that was just created.</p>
+                </li>
+                <li>
+                    <p>Change the layer settings by setting the opacity to <strong>45%</strong>, and blending mode to <strong>"Color"</strong>.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/blendingmodes-layers-3.png" alt='layers setting'></div>
+            </ol>
+            <p>We have now created a vintage filter for our image. Your photo should look similar to the example below. If we wanted to apply this filter to a separate image, we could follow the same procedure but with a different photo.</p>
+            <div class="centered-image-large"><img src="images/blendingmodes-final-edit.png" alt="vintage photo"></div>
+        </section>
+        <section class="topic">
+
+            <h1>Optional: Actions</h1>
+            <p><em>The next two sections of the manual will cover how to create automated actions and batch commands in Photoshop, and are optional to the course curriculum.</em></p>
+            <p>It's often necessary to repeat the same set of editing steps on multiple image files. For example, if you're editing photos for a website, you may need to resize and save the photos in a particular file format. This can become tedious when working with a large number of files. Fortunately, Photoshop offers an extremely helpful solution to this problem.</p>
+            <p>An action is a series of tasks that have been recorded to be "played back" on any number of files at once. Photoshop includes a number of pre-recorded actions, but you can also create your own. Actions can also be saved as separate files and easily exchanged, so many actions created by others are available for download online.</p>
+            <h2>Creating Actions</h2>
+            <p>To create an action, we need to record a series of editing steps that we apply to an image.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Open any previous image from the class files that you would like to use. In our example, we will be using <span class="type-text">fog.jpg</span>.</p>
+                </li>
+                <li>
+                    <p>Actions are managed through the action panel. To display the actions panel, navigate to <span class="type-text">Window > Actions</span>.</p>
+                </li>
+                <li>
+                    <p>By default, there is a folder in the actions panel called "Default Actions". To separate our own actions we will create a folder called "Custom Actions". Click the "create new set" icon in the bottom of the panel to create and name a new folder.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/actions-panel-1.png" alt="default actions"></div>
+                <li>
+                    <p>While the new custom actions folder is selected, click the "create new action" button at the bottom of the actions panel.</p>
+                </li>
+                <div class="centered-image-medium"><img src="images/actions-panel-2.png" alt="custom actions"></div>
+                <li>
+                    <p>In the window that opens, choose a name for you action. Make sure "set" is set to "Custom Actions".</p>
+                </li>
+                <li>
+                    <p>Finally, under "Function Key" you may optionally choose a key on your keyboard that will execute that action every time it is pressed.</p>
+                    <p>When you're finished adjusting your settings, go ahead a click "Record".</p>
+                </li>
+            </ol>
+            <p>Congratulations! You are now recording your first action. Every edit or change you make to the image in Photoshop is now being logged and recorded, until we choose to stop recording the action. <span class="highlight">Feel free to edit the image to your liking, using the tools and techniques we've learned in this manual.</span> This can including cropping or resizing the image, re-coloring, adding blur effects, or creating a custom filter using blending modes.</p>
+            <h2>Completing and Editing Actions</h2>
+            <p>To stop recording the action, click the stop button at the bottom of the actions panel. We have now finished an action that can be applied to other images.</p>
+            <p>Notice that the actions panel displays each step that occurred during the recording. To review the settings applied in a step, click the triangle next to the step name. You can also re-order steps by clicking and dragging to change their position in the list.</p>
+            <div class="centered-image-medium"><img src="images/actions-panel-3.png" alt="actions"></div>
+            <p>Finally, you may delete steps by selecting them and clicking the trash can icon at the bottom of the actions panel.</p>
+            <h2>Playing Actions</h2>
+            <p>Once recorded, actions are "played back" in order to perform the recorded steps on a single file, or a group of files.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Open up a different image found in the class files folder.</p>
+                </li>
+                <li>
+                    <p>With the actions panel open, select the new custom action you've created, then press the play button at the bottom of the actions panel. Photoshop will automatically perform the tasks included in the action.</p>
+                </li>
+            </ol>
+            <h1>Optional: Batch Processing</h1>
+            <p>Suppose we need to apply this single action to multiple photos at once. In this case, playing the action on each individual file can be a tedious process. In this exercise, we will play back an action on a group of files using Photoshop's batch processing feature.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In the menu bar, navigate to <span class="type-text">File > Automate > Batch</span>.</p>
+                </li>
+                <li>
+                    <p>In the window that appear, under the "Play" section, choose the custom actions set we created before, then choose the action you would like to be performed.</p>
+                </li>
+                <li>
+                    <p>The source section of the batch window specifies which files to perform the action on. Select "Choose", then pick a folder of images to apply the action to. In this case, will pick our <span class="type-text">actions-processing</span> folder found in our class files.</p>
+                </li>
+                <li>
+                    <p>The destination section of the batch window specifies where to save the finished files. Under the drop-down menu, select "Folder", then choose a destination folder for the finished files.</p>
+                </li>
+                <div class="full-width-image"><img src="images/actions-batchwindow.png" alt="batch"></div>
+                <li>
+                    <p>Click OK to play the action on all of the images within the folder you selected. When finished, navigate to the destination folder and confirm that the batch process has worked.</p>
+                </li>
+            </ol>
+        </section>
+        <section class="topic">
+
+            <h1>Blending Modes Glossary</h1>
+            <p>Blending modes work most effectively if there are two or more layers of content. Essentially, blend modes are inputs and outputs. The top layer is the one that controls the output and the layers beneath are apart of the function of the output.</p>
+            <p>Below is a comprehensive list of blending modes and their functions, provided by Adobe on their official site. For more on how blending modes work, and examples of their usage, see the blending modes section of this manual.</p>
+            <h2>Darken Modes</h2>
+            <table>
+                <tr>
+                    <th>Blending Mode</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Darken</td>
+                    <td>Looks at the color information in each channel and selects the base or blend color—whichever is darker—as the result color.</td>
+                </tr>
+                <tr>
+                    <td>Multiply</td>
+                    <td>Looks at the color information in each channel and multiplies the base color by the blend color. The result color is always a darker color.</td>
+                </tr>
+                <tr>
+                    <td>Color Burn</td>
+                    <td>Looks at the color information in each channel and darkens the base color to reflect the blend color by increasing the contrast between the two.</td>
+                </tr>
+                <tr>
+                    <td>Linear Burn</td>
+                    <td>Looks at the color information in each channel and darkens the base color to reflect the blend color by decreasing the brightness.</td>
+                </tr>
+            </table>
+            <h2>Lighten Modes</h2>
+            <table>
+                <tr>
+                    <th>Blending Mode</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Lighten</td>
+                    <td>Looks at the color information in each channel and selects the base or blend color—whichever is lighter—as the result color.</td>
+                </tr>
+                <tr>
+                    <td>Screen</td>
+                    <td>Looks at each channel’s color information and multiplies the inverse of the blend and base colors. The result color is always a lighter color.</td>
+                </tr>
+                <tr>
+                    <td>Color Dodge</td>
+                    <td>Looks at the color information in each channel and brightens the base color to reflect the blend color by decreasing contrast between the two.</td>
+                </tr>
+                <tr>
+                    <td>Linear Dodge</td>
+                    <td>Looks at the color information in each channel and brightens the base color to reflect the blend color by increasing the brightness.</td>
+                </tr>
+            </table>
+            <h2>Contrast Modes</h2>
+            <table>
+                <tr>
+                    <th>Blending Mode</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Overlay</td>
+                    <td>Multiplies or screens the colors, depending on the base color. Patterns or colors overlay the existing pixels while preserving the highlights and shadows of the base color. The base color is not replaced, but mixed with the blend color to reflect the lightness or darkness of the original color.</td>
+                </tr>
+                <tr>
+                    <td>Soft Light</td>
+                    <td>Darkens or lightens the colors, depending on the blend color. The effect is similar to shining a diffused spotlight on the image. If the blend color (light source) is lighter than 50% gray, the image is lightened as if it were dodged. If the blend color is darker than 50% gray, the image is darkened as if it were burned in. </td>
+                </tr>
+                <tr>
+                    <td>Hard Light</td>
+                    <td>Multiplies or screens the colors, depending on the blend color. The effect is similar to shining a harsh spotlight on the image. If the blend color (light source) is lighter than 50% gray, the image is lightened, as if it were screened. This is useful for adding highlights to an image. If the blend color is darker than 50% gray, the image is darkened, as if it were multiplied.</td>
+                </tr>
+                <tr>
+                    <td>Vivid Light</td>
+                    <td>Burns or dodges the colors by increasing or decreasing the contrast, depending on the blend color. If the blend color (light source) is lighter than 50% gray, the image is lightened by decreasing the contrast. If the blend color is darker than 50% gray, the image is darkened by increasing the contrast.</td>
+                </tr>
+                <tr>
+                    <td>Linear Light</td>
+                    <td>Burns or dodges the colors by decreasing or increasing the brightness, depending on the blend color. If the blend color (light source) is lighter than 50% gray, the image is lightened by increasing the brightness. If the blend color is darker than 50% gray, the image is darkened by decreasing the brightness.</td>
+                </tr>
+                <tr>
+                    <td>Pin Light</td>
+                    <td>Replaces the colors, depending on the blend color. If the blend color (light source) is lighter than 50% gray, pixels darker than the blend color are replaced, and pixels lighter than the blend color do not change. If the blend color is darker than 50% gray, pixels lighter than the blend color are replaced, and pixels darker than the blend color do not change. </td>
+                </tr>
+                <tr>
+                    <td>Hard Mix</td>
+                    <td> Adds the red, green and blue channel values of the blend color to the RGB values of the base color. If the resulting sum for a channel is 255 or greater, it receives a value of 255; if less than 255, a value of 0. This changes all pixels to primary additive colors (red, green, or blue), white, or black.</td>
+                </tr>
+            </table>
+            <h2>Comparative Modes</h2>
+            <table>
+                <tr>
+                    <th>Blending Mode</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Difference</td>
+                    <td>Looks at the color information in each channel and subtracts either the blend color from the base color or the base color from the blend color, depending on which has the greater brightness value.</td>
+                </tr>
+                <tr>
+                    <td>Exclusion</td>
+                    <td>Creates an effect similar to but lower in contrast than the Difference mode.</td>
+                </tr>
+            </table>
+            <h2>Composite Modes</h2>
+            <table>
+                <tr>
+                    <th>Blending Mode</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Hue</td>
+                    <td>Creates a result color with the luminance and saturation of the base color and the hue of the blend color.</td>
+                </tr>
+                <tr>
+                    <td>Saturation</td>
+                    <td>Creates a result color with the luminance and hue of the base color and the saturation of the blend color. Painting with this mode in an area with no (0) saturation (gray) causes no change.</td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>Creates a result color with the luminance of the base color and the hue and saturation of the blend color.</td>
+                </tr>
+                <tr>
+                    <td>Luminosity</td>
+                    <td>Creates a result color with the hue and saturation of the base color and the luminance of the blend color. This mode creates the inverse effect of Color mode.</td>
+                </tr>
+            </table>
+        </section>
+        <!-- END MAIN CONTENT -->
+    </body>
+
+</html>
